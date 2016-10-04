@@ -1,0 +1,13 @@
+#hmtestimonial-list{clear:both; width:100%; margin:10px 0;float:left;}
+#hmtestimonial-list li{clear:both; width:100%;float:left;margin-bottom:10px;padding-bottom:10px; border-bottom:1px solid #e5e5e5;}
+#hmtestimonial-list li .testimonial_img{float:left; margin-right:20px;}
+#hmtestimonial-list .test_clean{ clear:both;}
+#hmtestimonial-list li .client_detail{ clear:right; float:right; width:}
+#hmtestimonial-list li .testimonial_info{ font-style:italic;}
+.testimonial-title h1{ float:left;}
+.testimonial-title button.button{ float:right;}
+
+#testimonialrotate{height:360px; overflow:hidden;}
+.block-hmtestimonial .block-content{ padding:5px 10px;}
+.block-hmtestimonial .client_image img{ max-width:173px;}
+.block-hmtestimonial .client_image{ margin-bottom:6px;}

@@ -1,0 +1,17 @@
+<?php 
+  $_brandCollection=$this->getBrand();
+ ?>
+
+=============
+<div class="content-bottom">
+    <ul>
+         <?php  foreach ($_brandCollection as $_brand): ?>
+        <li>
+            <a href="<?php echo $_brand->getProductUrl();?>">
+                <img class="img-responsive" src="<?php echo Mage::getBaseUrl('media').$_brand->getData('image') ?>"  alt="<?php echo $_brand->getData('name') ?>" />
+            </a>
+        </li>
+        <?php endforeach ?>         
+        <div class="clearfix"> </div>
+    </ul>
+</div>

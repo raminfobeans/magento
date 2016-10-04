@@ -1,0 +1,33 @@
+<!--$this->helper('testimonial')->getConfigEnableFrontend()-->
+<?php
+$collection = Mage::getModel('testimonial/testimonial')->getCollection()
+				->addFieldToFilter('status', array('eq' => 1));								
+?>
+<div class="page-title testimonial-title">
+  <h1><?php echo $this->__('User Testimonials'); ?></h1>
+
+  <?php if($this->helper('customer')->isLoggedIn() ):?>
+  <div class="submit-testimonial">
+    <button class="button" onclick="window.location='<?php echo Mage::getUrl('testimonial/form');?>'"> <span> <span> <?php echo $this->__('Submit Your Testimonial'); ?> </span> </span> </button>
+  </div>
+  <?php endif; ?>
+</div>
+
+<ul id="hmtestimonial-list">
+  <?php foreach ($collection as $_dataset): ?>
+  <li class="hmtestimonial">
+    <div class="testimonial_img">
+      <?php 
+	  if($_dataset->getData('image') != ''):?>
+      <img src="<?php echo Mage::getBaseUrl('media').$_dataset->getData('image') ?>" width="170"  alt="<?php echo $_dataset->getData('name') ?>" />
+      <?php endif;?>
+    </div>
+    <div class="testimonial_left">
+      <div class="testimonial_info"><?php echo $_dataset->getData('testimonial'); ?></div>
+      <div class="test_clean"></div>
+      <div class="client_detail"> <?php echo $_dataset->getData('name') ?><br />
+        <?php echo $_dataset->getData('email') ?>&nbsp;&nbsp;
+ </div>
+    </div>
+  </li>  <?php endforeach; ?>
+</ul>

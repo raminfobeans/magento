@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Infobeans_Brand>
+            <version>0.1.1</version>
+        </Infobeans_Brand>    
+    </modules>  
+    <global>
+        <models>
+            <brand>
+                <class>Infobeans_Brand_Model</class>
+                <resourceModel>brand_mysql4</resourceModel>
+            </brand>
+            <brand_mysql4>
+                <class>infobeans_Brand_Model_Mysql4</class>
+                <entities>
+                    <brand>
+                        <table>brand</table>
+                    </brand>    
+                </entities>    
+            </brand_mysql4>    
+        </models>
+        <resources>
+            <brand_setup>
+                <setup>
+                    <module>Infobeans_Brand</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>    
+            </brand_setup>  
+            <brand_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>    
+            </brand_write>
+            <brand_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>    
+            </brand_read>          
+        </resources>       
+        <helpers>
+            <brand>
+                <class>Infobeans_Brand_Helper</class>
+            </brand>    
+        </helpers> 
+        <blocks>
+            <brand>
+                <class>Infobeans_Brand_Block</class>
+            </brand>    
+        </blocks>    
+    </global> 
+    <frontend>
+        <routers>
+            <brand>
+                <use>standard</use>
+                <args>
+                    <module>Infobeans_Brand</module>
+                    <frontName>brand</frontName>
+                </args>
+            </brand>
+        </routers>
+    </frontend>
+    <admin>
+        <routers>
+            <brand>
+                <use>admin</use>
+                <args>
+                    <module>Infobeans_Brand</module>
+                    <frontName>brand</frontName>
+                </args>
+            </brand>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <brand module="brand">
+                <title>Infobeans Brand</title>
+                <sort_order>100</sort_order>
+                <children>
+                    <brand module="brand">
+                        <title>Manage Brand</title>
+                        <sort_order>0</sort_order>
+                        <action>brand/adminhtml_brand</action>
+                    </brand>
+<!--                    <config module="brand">
+                        <title>Configuration</title>
+                        <sort_order>2</sort_order>
+                        <action>adminhtml/system_config/edit/section/infobeans_brand</action>
+                    </config>-->
+                </children>
+            </brand>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <brand translate="title" module="brand">
+                            <title>Brand</title>
+                            <sort_order>1000</sort_order>
+                            <children>
+                                <brand translate="title">
+                                    <title>Manage Brand</title>
+                                    <sort_order>0</sort_order>
+                                </brand>
+                                
+                                <config module="brand">
+                        <title>Configuration</title>
+                        <sort_order>2</sort_order>
+                    </config>
+                                
+
+                            </children>
+                        </brand>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <brand>
+                    <file>brand.xml</file>
+                </brand>
+            </updates>
+        </layout>
+    </adminhtml>    
+   
+
+    
+    
+    
+</config>    

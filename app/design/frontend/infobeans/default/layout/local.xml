@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0"><!-- everything goes in here -->
+     <default>
+        <reference name="top.links">
+            <remove name="checkout_cart_link" />            
+            <remove name="wishlist_link" />
+            <action method="addLink" translate="label title">
+                <label>Testimonial</label>
+                <url>/testimonial/index</url>
+                <title>Testimonial</title>
+                <prepare/>
+                <urlParams/>
+                <position>100</position>
+                <liParams />
+                <aParams/>
+            </action>
+        </reference>
+     </default>
+     <cms_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+    </cms_index_index>
+    
+    
+    <catalog_product_view>
+        <reference name="content">
+            <reference name="product.info">
+                <block type="review/product_view_list" name="product.info.product_additional_data" as="reviews" template="review/product/view/list.phtml">
+                </block>
+            </reference>
+        </reference>
+    </catalog_product_view>
+    
+    
+    
+    
+    
+</layout>
+
