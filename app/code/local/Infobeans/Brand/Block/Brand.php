@@ -8,4 +8,14 @@ class Infobeans_Brand_Block_Brand extends Mage_Core_Block_Template {
         return $collection;
     }
 
+    public function add($a, $b) {
+        return $a + $b;
+    }
+
+    public function getEnabledBrandStausCount() {
+        $collection = Mage::getModel('brand/brand')->getCollection()
+                ->addFieldToFilter('status', array('eq' => 1));
+        return $collection->getSize();
+    }
+
 }

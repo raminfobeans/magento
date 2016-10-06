@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/var/www/html/magento/app/code/local/Infobeans/Custombanner/etc/config.xml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/template/catalog/product/new.phtml</file>
-            <file>file:/var/www/html/magento/app/code/local/Infobeans/Custombanner/Model/Observer.php</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/template/catalog/product/view/media.phtml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/layout/local.xml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/template/catalog/product/view/type/options/configurable.phtml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/template/page/html/header.phtml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/layout/page.xml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/template/catalog/product/featured.phtml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/layout/catalog.xml</file>
-            <file>file:/var/www/html/magento/app/design/frontend/infobeans/default/template/catalog/product/view.phtml</file>
-            <file>file:/var/www/html/magento/app/code/local/Infobeans/Custombanner/controllers/IndexController.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
