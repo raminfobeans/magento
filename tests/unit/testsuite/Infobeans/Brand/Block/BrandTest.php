@@ -43,7 +43,13 @@ class Infobeans_Brand_Block_BrandTest extends PHPUnit_Framework_TestCase
         $this->assertEqualS(6,$count);                  // obtained manually from admin brand module
     }        
 
+    public function testVerifyModuleEnabled()
+    {
+        echo Mage::helper('core/data')->isModuleEnabled('infobeans_Brandsss');
 
+    }       
+    
+    
 }       
 
 
